@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="AUTHOR" content="Rabie Abdullah">
+    <meta name="DESCRIPTION" content="Creating a HTML form for a help desk page">
+    <meta name="KEYWORDS" content="help desk, support, form">
+    <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+<a href="https://www.swin.edu.au">
+<img src="images/swin_logo.png" alt="CWA Logo" width="200" height="100">
+</a>
+<h1>CWA Help Desk Appointment</h1>
+<p>
+The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday.
+Check Blackboard for when CWA tutors will be there.
+</p>
+<form action="submit.php" method="post">
+    <fieldset>
+        <legend>Student details</legend>
+    <p>
+        <label for="student-id">Student ID</label>
+        <input type="text" id="student-id" name="student-id" required
+        pattern="[0-9]{7,10}"
+        title="Enter 7 to 10 digits.">
+    </p>
+    <p>
+        <label for="given-name">Given Name</label>
+        <input type="text" id="given-name" name="given-name" required
+        required maxlength="15" pattern="[A-Za-z]+"
+        title="Enter up to 15 letters only.">
+    </p>
+    <p>
+        <label for="family-name">Family Name</label>
+        <input type="text" id="family-name" name="family-name" required
+        required maxlength="15" pattern="[A-Za-z]+"
+        title="Enter up to 15 letters only.">
+    </p>
+    </fieldset>
+    <fieldset>
+        <legend>Your unit</legend>
+        <input type="radio" id="COS10011" name="unit" value="COS10011" required>
+        <label for="COS10011">COS10011</label>
+        <input type="radio" id="COS60004" name="unit" value="COS60004">
+        <label for="COS60004">COS60004</label>
+        <input type="radio" id="COS60007" name="unit" value="COS60007">
+        <label for="COS60007">COS60007</label>
+        <p>
+            <label for="tutor">Your Tutor</label>  
+            <select id="tutor" name="tutor" required>
+                <option value="">Please Select</option>
+                <option value="Mohammad Sami">Mohammad Sami</option>
+                <option value="Malik Albadri">Malik Albadri</option>
+                <option value="Jotaro Kujo">Jotaro Kujo</option>
+            </select>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Issue</legend>
+        <input type="checkbox" id="issue.html" name="issue-table" value="HTML" checked="checked">
+        <label for="issue.html">HTML</label>
+        <input type="checkbox" id="issue.css" name="issue-table" value="CSS">
+        <label for="issue.css">CSS</label>
+        <input type="checkbox" id="issue.JavaScript" name="issue-table" value="JavaScript">
+        <label for="issue.JavaScript">JavaScript</label>
+        <input type="checkbox" id="issue.php" name="issue-table" value="PHP">
+        <label for="issue.php">PHP</label>
+        <input type="checkbox" id="issue.MySQL" name="issue-table" value="MySQL">
+        <label for="issue.MySQL">MySQL</label>
+        <p>
+            <label for="description">Description of Issue</label>
+            <textarea id="description" name="description" rows="4" cols="40"
+            placeholder="Write description of your problem here..." required></textarea>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Preferred Date / Time</legend>
+        <p>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required
+            placeholder="dd-mm-yyyy" maxlength="10" size="10">
+        </p>
+        <p>
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required
+            placeholder="00:00" maxlength="5" size="5">
+        </p>
+    </fieldset>
+    <button type="submit">Book</button>
+    <button type="reset">Reset form</button>
+</form>
+</body>
+</html>
