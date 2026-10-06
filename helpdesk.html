@@ -28,13 +28,13 @@ Check Blackboard for when CWA tutors will be there.
     <p>
         <label for="given-name">Given Name</label>
         <input type="text" id="given-name" name="given-name" required
-        required maxlength="15" pattern="[A-Za-z]+"
+        maxlength="15" pattern="[A-Za-z]+"
         title="Enter up to 15 letters only.">
     </p>
     <p>
         <label for="family-name">Family Name</label>
         <input type="text" id="family-name" name="family-name" required
-        required maxlength="15" pattern="[A-Za-z]+"
+        maxlength="15" pattern="[A-Za-z]+"
         title="Enter up to 15 letters only.">
     </p>
     </fieldset>
@@ -78,13 +78,11 @@ Check Blackboard for when CWA tutors will be there.
         <legend>Preferred Date / Time</legend>
         <p>
             <label for="date">Date</label>
-            <input type="date" id="date" name="date" required
-            placeholder="dd-mm-yyyy" maxlength="10" size="10">
+            <input type="date" id="date" name="date" required>
         </p>
         <p>
             <label for="time">Time</label>
-            <input type="time" id="time" name="time" required
-            placeholder="00:00" maxlength="5" size="5">
+            <input type="time" id="time" name="time" required>
         </p>
     </fieldset>
     <button type="submit">Book</button>
